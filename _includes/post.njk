@@ -1,0 +1,23 @@
+{% extends "_layout.njk" %}
+
+{% block layoutBody %}
+<div>
+  <div class="container mx-auto prose py-24">
+    <div class="mb-12">
+      <a class="no-underline font-bold" href="/">{{ config.title }}</a>
+    </div>
+    <h1>{{ title }}</h1>
+    <div class="italic text-gray-500">
+      {% date date %}
+    </div>
+    <div>
+      {{content | safe}}
+    </div>
+    <hr />
+    {% include "_donate.njk" %}
+    {% include "_footer.njk" %}
+  </div>
+
+</div>
+
+{% endblock %}

@@ -4,6 +4,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^1.0.0",
+		"@11ty/eleventy-plugin-rss": "^1.1.2",
 		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "^10.4.4",
 		"dayjs": "^1.11.0",

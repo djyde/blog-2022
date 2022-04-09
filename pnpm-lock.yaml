@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@11ty/eleventy': ^1.0.0
+  '@11ty/eleventy-plugin-rss': ^1.1.2
   '@tailwindcss/typography': ^0.5.2
   autoprefixer: ^10.4.4
   dayjs: ^1.11.0
@@ -10,6 +11,7 @@ specifiers:
 
 dependencies:
   '@11ty/eleventy': 1.0.0
+  '@11ty/eleventy-plugin-rss': 1.1.2
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
   autoprefixer: 10.4.4
   dayjs: 1.11.0
@@ -20,6 +22,16 @@ packages:
 
   /@11ty/dependency-tree/2.0.0:
     resolution: {integrity: sha512-tYrGX3Tvccufy2jaYDkYpjBmVP1LeQq6b/d0r4GYThTXL4f3ZR7yMAl/0r8h9xvnsP+gkO53wfnV7s8cXcCtEg==}
+    dev: false
+
+  /@11ty/eleventy-plugin-rss/1.1.2:
+    resolution: {integrity: sha512-QdXMl29MzMtyMj9Y1lYijPX4vGMnBDo4Peyi4GCJznCO4+eryAZiyVYciLBCek893EXL3RLOuVSshYo+jvjZ0w==}
+    dependencies:
+      debug: 4.3.4
+      posthtml: 0.15.2
+      posthtml-urls: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@11ty/eleventy-plugin-syntaxhighlight/4.0.0:
@@ -254,6 +266,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: 2.0.1
+    dev: false
+
+  /any-promise/0.1.0:
+    resolution: {integrity: sha1-gwtoCqflbzNFHUsEnzvYBESY7ic=}
     dev: false
 
   /anymatch/3.1.2:
@@ -1186,6 +1202,15 @@ packages:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
     dev: false
 
+  /htmlparser2/6.1.0:
+    resolution: {integrity: sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 4.3.1
+      domutils: 2.8.0
+      entities: 2.1.0
+    dev: false
+
   /htmlparser2/7.2.0:
     resolution: {integrity: sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==}
     dependencies:
@@ -1193,6 +1218,11 @@ packages:
       domhandler: 4.3.1
       domutils: 2.8.0
       entities: 3.0.1
+    dev: false
+
+  /http-equiv-refresh/1.0.0:
+    resolution: {integrity: sha1-jsU4hmBCvl8/evpzfRmNlL6xsHs=}
+    engines: {node: '>= 0.10'}
     dev: false
 
   /http-errors/1.6.3:
@@ -1459,6 +1489,10 @@ packages:
     resolution: {integrity: sha512-HbU4xBsY1r3ZEORTgPsiluXsOtMx8iI0MqTsPejgIk+sIgta5wQUYsoQgUPuGKWVHKKKMO9PidiMEPKlePl8rg==}
     engines: {node: '>=4.8.7'}
     hasBin: true
+    dev: false
+
+  /list-to-array/1.1.0:
+    resolution: {integrity: sha1-yn3/ZAYGQzysdcvoRGrNhksVv28=}
     dev: false
 
   /localtunnel/2.0.2:
@@ -1729,6 +1763,10 @@ packages:
       lines-and-columns: 1.2.4
     dev: false
 
+  /parse-srcset/1.0.2:
+    resolution: {integrity: sha1-8r0iH2zJcKk42IVWq8WJyqqiveE=}
+    dev: false
+
   /parseqs/0.0.6:
     resolution: {integrity: sha512-jeAGzMDbfSHHA091hr0r31eYfTig+29g3GKKE/PPbEQ65X0lmMwlEoqmhzu0iztID5uJpZsFlUPDP8ThPL7M8w==}
     dev: false
@@ -1846,6 +1884,36 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
+  /posthtml-parser/0.7.2:
+    resolution: {integrity: sha512-LjEEG/3fNcWZtBfsOE3Gbyg1Li4CmsZRkH1UmbMR7nKdMXVMYI3B4/ZMiCpaq8aI1Aym4FRMMW9SAOLSwOnNsQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      htmlparser2: 6.1.0
+    dev: false
+
+  /posthtml-render/1.4.0:
+    resolution: {integrity: sha512-W1779iVHGfq0Fvh2PROhCe2QhB8mEErgqzo1wpIt36tCgChafP+hbXIhLDOM8ePJrZcFs0vkNEtdibEWVqChqw==}
+    engines: {node: '>=10'}
+    dev: false
+
+  /posthtml-urls/1.0.0:
+    resolution: {integrity: sha512-CMJ0L009sGQVUuYM/g6WJdscsq6ooAwhUuF6CDlYPMLxKp2rmCYVebEU+wZGxnQstGJhZPMvXsRhtqekILd5/w==}
+    engines: {node: '>= 4'}
+    dependencies:
+      http-equiv-refresh: 1.0.0
+      list-to-array: 1.1.0
+      parse-srcset: 1.0.2
+      promise-each: 2.2.0
+    dev: false
+
+  /posthtml/0.15.2:
+    resolution: {integrity: sha512-YugEJ5ze/0DLRIVBjCpDwANWL4pPj1kHJ/2llY8xuInr0nbkon3qTiMPe5LQa+cCwNjxS7nAZZTp+1M+6mT4Zg==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      posthtml-parser: 0.7.2
+      posthtml-render: 1.4.0
+    dev: false
+
   /pretty/2.0.0:
     resolution: {integrity: sha1-rbx5YLe7/iiaVX3F9zdhmiINBqU=}
     engines: {node: '>=0.10.0'}
@@ -1858,6 +1926,12 @@ packages:
   /prismjs/1.27.0:
     resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
     engines: {node: '>=6'}
+    dev: false
+
+  /promise-each/2.2.0:
+    resolution: {integrity: sha1-M1MXTv8mlEgQN+BOAfd6oPttG2A=}
+    dependencies:
+      any-promise: 0.1.0
     dev: false
 
   /promise/7.3.1:
