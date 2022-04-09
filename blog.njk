@@ -1,0 +1,17 @@
+{% extends "page.njk" %}
+
+{% block pageBody %}
+<div class="mt-12">
+  {% for post in collections.blog | reverse %}
+  <div class="relative">
+    {% if post.data.pin %}
+    <div class="absolute -left-6">✱</div>
+    {% endif %}
+    <div class="my-2 flex gap-2">
+      <a class="no-underline text-gray-700 font-normal" href="{{ post.url }}">{{ post.data.title }}</a> <span
+        class="italic text-gray-400">{% date post.date %}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

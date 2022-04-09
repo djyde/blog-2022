@@ -1,0 +1,17 @@
+{% extends "_layout.njk" %}
+{% block layoutBody %}
+<div class="container prose mx-auto py-24">
+  <h1>{{ config.title }}</h1>
+  <nav class="flex gap-4">
+    <a href="/blog">文章</a>
+    <a href="/music">音乐</a>
+    <a href="/Twitter">Twitter</a>
+    <a href="/rss">RSS</a>
+  </nav>
+  <div>
+    {{ content | safe }}
+  </div>
+
+  {% include "./_footer.njk" %}
+</div>
+{% endblock %}
