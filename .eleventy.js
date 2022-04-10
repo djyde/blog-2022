@@ -6,6 +6,8 @@ module.exports = config => {
   config.addPlugin(modern)
   config.addPlugin(rss) 
   config.addPassthroughCopy("_redirects");
+  config.addPassthroughCopy("favicon.ico");
+
   config.addShortcode("date", (content) => {
     return dayjs(content).format('YYYY/MM/DD')
   })

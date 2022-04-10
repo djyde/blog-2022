@@ -31,5 +31,5 @@ title: Randy's Blog
 
 ### 联系方式
 
-我活跃在 [GitHub](https://github.com/djyde) 和 [Twitter](https://twitter.com/randyloop). 如果你想单独联系我，可以通过 Twitter 私讯，或通过我的 [Telegram](https://t.me/djyde) 直接联系到我。当然，我更偏向于通过 Email (hi@taonan.lu) 联系。
+我活跃在 [GitHub](https://github.com/djyde) 和 [Twitter](https://twitter.com/randyloop). 如果你想单独联系我，可以通过 Twitter 私讯，或通过我的 [Telegram](https://t.me/djyde) 直接联系到我。当然，我更希望你能通过 Email (hi@taonan.lu) 联系。
 
