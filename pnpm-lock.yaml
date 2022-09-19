@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@11ty/eleventy': ^1.0.0
@@ -6,7 +6,8 @@ specifiers:
   '@tailwindcss/typography': ^0.5.2
   autoprefixer: ^10.4.4
   dayjs: ^1.11.0
-  eleventy-plugin-modern: ^1.0.0
+  eleventy-plugin-modern: ^2.0.2
+  markdown-it-toc-done-right: ^4.2.0
   tailwindcss: ^3.0.23
 
 dependencies:
@@ -15,7 +16,8 @@ dependencies:
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
   autoprefixer: 10.4.4
   dayjs: 1.11.0
-  eleventy-plugin-modern: 1.0.0
+  eleventy-plugin-modern: 2.0.2
+  markdown-it-toc-done-right: 4.2.0
   tailwindcss: 3.0.23_autoprefixer@10.4.4
 
 packages:
@@ -109,6 +111,8 @@ packages:
     resolution: {integrity: sha512-vqUSBLP8dQHFPdPi9bc5GK9vRkYHJ49fsZdtoJ8EQ8ibpwk5rPKfvNIwChB0KVXcIjcepEBBd2VHC5r9Gy8ueg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: false
 
   /@babel/types/7.17.0:
@@ -405,7 +409,7 @@ packages:
     dev: false
 
   /boolbase/1.0.0:
-    resolution: {integrity: sha1-aN/1++YMUes3cl6p4+0xDcwed24=}
+    resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
     dev: false
 
   /brace-expansion/1.1.11:
@@ -659,6 +663,8 @@ packages:
       finalhandler: 1.1.0
       parseurl: 1.3.3
       utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /constantinople/4.0.1:
@@ -723,6 +729,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: false
@@ -869,13 +880,16 @@ packages:
     resolution: {integrity: sha512-ZYfpVLULm67K7CaaGP7DmjyeMY4naxsbTy+syVVxT6QHI1Ww8XbJjmr9fDckrhq44WzCrcC5kH3zGpdusxwwqg==}
     dev: false
 
-  /eleventy-plugin-modern/1.0.0:
-    resolution: {integrity: sha512-OWJJ9ORSmVUaUJxFzipCq5c9iIkbSTurXNALHOsd82FVupUdkoA63x/Hum3zWcAPPnuzcaT9XO/dDBTtjpoe3g==}
+  /eleventy-plugin-modern/2.0.2:
+    resolution: {integrity: sha512-Ndk5oJaXh4+DNi9l66QBhgwMwJ6wBBzqQdSrtbRU5BfjySIqXcxtQuN3lotyDxsNiqEt6AKOGt3Y0SoUvRbROA==}
     dependencies:
       '@11ty/eleventy-plugin-syntaxhighlight': 4.0.0
+      markdown-it: 12.3.2
+      markdown-it-anchor: 8.6.5_markdown-it@12.3.2
       postcss: 8.4.12
       postcss-load-config: 3.1.4_postcss@8.4.12
     transitivePeerDependencies:
+      - '@types/markdown-it'
       - ts-node
     dev: false
 
@@ -1042,6 +1056,8 @@ packages:
       parseurl: 1.3.3
       statuses: 1.3.1
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /follow-redirects/1.14.9_debug@4.3.2:
@@ -1547,6 +1563,19 @@ packages:
   /luxon/2.3.1:
     resolution: {integrity: sha512-I8vnjOmhXsMSlNMZlMkSOvgrxKJl0uOsEzdGgGNZuZPaS9KlefpE9KV95QFftlJSC+1UyCC9/I69R02cz/zcCA==}
     engines: {node: '>=12'}
+    dev: false
+
+  /markdown-it-anchor/8.6.5_markdown-it@12.3.2:
+    resolution: {integrity: sha512-PI1qEHHkTNWT+X6Ip9w+paonfIQ+QZP9sCeMYi47oqhH+EsW8CrJ8J7CzV19QVOj6il8ATGbK2nTECj22ZHGvQ==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
+    dependencies:
+      markdown-it: 12.3.2
+    dev: false
+
+  /markdown-it-toc-done-right/4.2.0:
+    resolution: {integrity: sha512-UB/IbzjWazwTlNAX0pvWNlJS8NKsOQ4syrXZQ/C72j+jirrsjVRT627lCaylrKJFBQWfRsPmIVQie8x38DEhAQ==}
     dev: false
 
   /markdown-it/12.3.2:
@@ -2122,6 +2151,8 @@ packages:
     dependencies:
       debug: 2.6.9
       minimatch: 3.1.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /reusify/1.0.4:
@@ -2199,6 +2230,8 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.4.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /serve-index/1.9.1:
@@ -2212,6 +2245,8 @@ packages:
       http-errors: 1.6.3
       mime-types: 2.1.35
       parseurl: 1.3.3
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /serve-static/1.13.2:
@@ -2222,6 +2257,8 @@ packages:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.16.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /server-destroy/1.0.1:
