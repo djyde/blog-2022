@@ -51,7 +51,7 @@ tags: blog
 
 ![攀岩](https://gbstatic.djyde.com/uPic/0DfpeL.jpg?x-oss-process=style/80)
 
-攀岩是一个力量和技巧结合的运动，我因为有力量训练的基础，让我入门这个运动非常快。但我喜欢学习和应用技巧的部分，我被攀岩的兴趣很大程度上来自于观看了 [Jain Kim 的优雅脚法](https://www.bilibili.com/video/BV13s411j7fe).
+攀岩是一个力量和技巧结合的运动，我因为有力量训练的基础，让我入门这个运动非常快。但我喜欢学习和应用技巧的部分，我对攀岩的兴趣很大程度上来自于观看了 [Jain Kim 的优雅脚法](https://www.bilibili.com/video/BV13s411j7fe).
 
 ## 感染 Omicron
 
