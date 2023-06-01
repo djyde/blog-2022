@@ -1,0 +1,72 @@
+---
+import Home from "../layouts/Home.astro";
+import PostList from "../components/PostList.astro";
+import { Content as Intro } from "../intro.md";
+
+const data = {
+  activities: [
+    {
+      title: "二分电台: #8 编程启蒙/从社区学习/个人竞争力",
+      url: "https://binary.2bab.me/episodes/008-enlightenment-n-self-innovation",
+    },
+    {
+      title: "ByteTalk: 跟 Randy 聊聊博客、编程、创作那些事",
+      url: "https://bytetalk.fm/posts/episode-4/",
+    },
+  ],
+
+  publications: [
+    {
+      title: "Next.js 应用开发实践",
+      url: "https://nextjs-in-action-cn.taonan.lu/",
+    },
+  ],
+};
+---
+
+<Home>
+  <div class="mx-auto text-sm">
+    <h2 class="font-bold mb-6 text-md">ABOUT / 关于我</h2>
+    <div class="prose prose-sm">
+      <Intro />
+    </div>
+  </div>
+  <div class="text-sm mt-8">
+    <h2 class="font-bold mb-6 text-md">PUBLIC / 公共表达</h2>
+    <div class="ml-6 md:ml-0">
+      <ul class="list-disc list-inside leading-loose">
+        {
+          data.activities.map((activity) => (
+            <li>
+              <a target="_blank" class="underline" href={activity.url}>
+                {activity.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="text-sm mt-8">
+    <h2 class="font-bold mb-6 text-md">PUBLICATION / 写作</h2>
+    <div class="ml-6 md:ml-0">
+      <ul class="list-disc list-inside leading-loose">
+        {
+          data.publications.map((publication) => (
+            <li>
+              <a target="_blank" class="underline" href={publication.url}>
+                {publication.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="text-sm mt-8">
+    <h2 class="font-bold mb-6 text-md">ESSAYS / 文章</h2>
+    <div class="ml-6 md:ml-0">
+      <PostList />
+    </div>
+  </div>
+</Home>
