@@ -19,6 +19,10 @@ export default {
       url: '/letters'
     },
     {
+      title: '一对一咨询',
+      url: '/consulting'
+    },
+    {
       title: 'RSS',
       url: '/rss.xml'
     }
