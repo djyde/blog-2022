@@ -20,6 +20,8 @@ pin: true
 
 虽然这种方式还是有点繁琐，而且 csv 格式其实很不稳定，很容易被笔记里的一些字符导致导入失败，但在此之前我想基本没有人可以这么「自动化」地做到这件事了。
 
+![](https://gbstatic.djyde.com/uPic/SwvDHp.png?x-oss-process=style/80)
+
 我把它发布到了 V2EX, 写了点介绍，并且代码是开源的。
 
 但是，在当时，我隐约觉得这个需求会有人愿意买单，因为我相信绝对不止我一个微信读书和 Readwise 的共同用户有这个需求。但我当时刚好在读 Sahil Lavingia 的 The minimalist entrepreneur 这本书（在接下来的内容我会多次提起这本书），里面有一个让我感触很大的观点—— start with community, 创业从社区开始。
