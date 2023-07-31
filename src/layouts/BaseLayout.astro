@@ -10,6 +10,7 @@ import config from '../config';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
+		<meta property="og:site_name" content={"Randy's Blog"} />
 		<meta property="og:title" content={Astro.props.title} />
 		<meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
 		<meta property="og:image" content={Astro.props.ogImage || new URL("/ogImage.png", Astro.site) } />
