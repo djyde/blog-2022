@@ -7,7 +7,7 @@ import config from "../config"
 const { frontmatter, headings } = Astro.props
 ---
 
-<BaseLayout title={`${frontmatter.title} | ${config.title}`}>
+<BaseLayout title={`${frontmatter.title} | ${config.title}`} ogType="article">
   <TOC headings={headings} />
   <nav
     class="border-b p-4 sm:px-8 px-4 flex gap-4 items-center sticky top-0 bg-white/50 backdrop-blur-lg"

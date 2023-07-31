@@ -1,5 +1,6 @@
 ---
 import Umami from '../components/Umami.astro'
+import config from '../config';
 ---
 
 <html lang="en">
@@ -9,6 +10,11 @@ import Umami from '../components/Umami.astro'
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
+		<meta property="og:title" content={Astro.props.title} />
+		<meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+		<meta property="og:image" content={Astro.props.ogImage || Astro.props.frontmatter?.ogImage || new URL("/public/ogImage.png", Astro.site) } />
+		<meta property="og:description" content={Astro.props.frontmatter?.ogDescription || "About life, tech, coding."} />
+		<meta property="og:type" content={Astro.props.ogType || "website"} />
 	</head>
 	<body>
     <slot />
