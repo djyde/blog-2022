@@ -47,7 +47,7 @@ tags: blog
 
 ### Randynamic Studio
 
-离职后我就计划把我之后做的所有小工具统一到 [Randynamic Studio](https://randynamic.org/) 的名下. 很幸运，它的真正意义上的第一个产品 [Notepal](https://notepal.randynamic.org/) 算是非常成功。它没有为我赚巨额的钱，但它解决了很多人的需求，并且这些人愿意为它付费，这是我写在博客首页很多年的一个目标，在今年终于实现了。
+离职后我就计划把我之后做的所有小工具统一到 [Randynamic Studio](https://randynamic.org/) 的名下. 很幸运，它的真正意义上的第一个产品 [Notepal](https://notepal.randynamic.org/) 算是[非常成功](/blog/my-extension-sold-1k-yuan/)。它没有为我赚巨额的钱，但它解决了很多人的需求，并且这些人愿意为它付费，这是我写在博客首页很多年的一个目标，在今年终于实现了。
  
 多年来我把 Y Combinator 的 slogan 一直放在心中，有很长一段时间我每天睡醒后心里就会自动播放这句话：
 
