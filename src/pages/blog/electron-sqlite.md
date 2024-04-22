@@ -219,3 +219,5 @@ async function createWindow() {
 ## 实例源码
 
 你可以在 [这里](https://github.com/djyde/electron-drizzle-sqlite-demo) 找到这个示例的完整源码。
+
+特别感谢 [EGOIST](https://github.com/egoist) 提供灵感。
