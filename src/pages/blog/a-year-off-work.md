@@ -14,13 +14,13 @@ pin: true
 
 ### Notepal
 
-![notepal](../../../public/imgs/image-20240514220123411.png)
+![notepal](/imgs/image-20240514220123411.png)
 
 离职后第一个认真做的产品是 [Notepal](https://notepal.randynamic.org/), 这是一个用于把微信读书笔记同步到各个笔记应用的插件。我在[这篇文章](https://lutaonan.com/blog/my-extension-sold-1k-yuan)详细写过这个产品的起源和在做这个产品的时候的一些思考。我在做这个产品的时候完全没有想到，这个只卖 50 块的插件，在这一年帮我付了我一整年的房租。
 
 ### EpubKit
 
-![epubkit](../../../public/imgs/intro-CPIiIzFW.png)
+![epubkit](/imgs/intro-CPIiIzFW.png)
 
 [EpubKit](https://epubkit.app/zh) 是另外一个我投入比较多的产品。这是一个把网页转成 ePub 电子书的工具。正式上线不到一个月，收获了几十个付费用户。
 
