@@ -14,7 +14,7 @@ pin: true
 
 ### Notepal
 
-![notepal](/imgs/image-20240514220123411.png)
+![alt text](/imgs/image-20240514220123411.jpeg)
 
 离职后第一个认真做的产品是 [Notepal](https://notepal.randynamic.org/), 这是一个用于把微信读书笔记同步到各个笔记应用的插件。我在[这篇文章](https://lutaonan.com/blog/my-extension-sold-1k-yuan)详细写过这个产品的起源和在做这个产品的时候的一些思考。我在做这个产品的时候完全没有想到，这个只卖 50 块的插件，在这一年帮我付了我一整年的房租。
 
