@@ -33,10 +33,10 @@ const {headings} = Astro.props as {
     a.addEventListener('click', e => {
       e.preventDefault()
 
-      // replace history
-      history.replaceState(null, '', a.getAttribute('href'))
+      const href = a.getAttribute('href')
+      history.replaceState(null, '', href)
 
-      const target = document.querySelector(a.getAttribute('href'))
+      const target = document.querySelector(href)
       if (target) {
         window.scrollTo({
           top: target.getBoundingClientRect().top + window.scrollY - 60,
