@@ -8,7 +8,6 @@ const { frontmatter, headings } = Astro.props
 ---
 
 <BaseLayout title={`${frontmatter.title} | ${config.title}`} ogType="article" ogDescription={frontmatter.ogDescription} ogImage={frontmatter.ogImage}>
-  <TOC headings={headings} />
   <nav
     class="border-b p-4 sm:px-8 px-4 flex gap-4 items-center sticky top-0 bg-white/50 backdrop-blur-lg"
   >
@@ -21,6 +20,7 @@ const { frontmatter, headings } = Astro.props
       }
     </div>
   </nav>
+  <TOC headings={headings} />
   <div class="prose mx-auto px-4 lg:px-0 my-12 lg:my-12">
     <h1>{frontmatter.title}</h1>
     <div class="text-slate-500">

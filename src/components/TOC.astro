@@ -1,5 +1,5 @@
 ---
-const { headings } = Astro.props as {
+const {headings} = Astro.props as {
   headings: Array<{
     depth: number,
     slug: string,
@@ -8,15 +8,17 @@ const { headings } = Astro.props as {
 }
 ---
 
-{headings.length ? <div class="fixed top-24 left-8 hidden lg:inline-block">
+{headings.length ?
+<div class="fixed top-24 left-8 hidden lg:inline-block">
   <div class="mb-2 text-sm">
     索引
   </div>
-  <div>
+  <div id="toc">
     {headings.map(heading => {
       return (
         <a
-          class={`block text-gray-500 hover:text-gray-900 text-sm mb-2 ${heading.depth > 2 ? 'ml-4' : ''}`}
+          title={heading.text}
+          class={`block text-gray-500 hover:text-gray-900 lg:w-[15ch] xl:w-[24ch] 2xl:w-auto 2xl:max-w-[35ch] text-sm mb-2 whitespace-nowrap overflow-hidden text-ellipsis ${heading.depth > 2 ? 'pl-4' : ''}`}
           href={`#${heading.slug}`}
         >
           {heading.text}
@@ -25,3 +27,21 @@ const { headings } = Astro.props as {
     })}
   </div>
 </div> : null}
+
+<script is:inline>
+  document.querySelectorAll('#toc a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault()
+
+      const href = a.getAttribute('href')
+      history.replaceState(null, '', href)
+
+      const target = document.querySelector(href)
+      if (target) {
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - 60,
+        })
+      }
+    })
+  })
+</script>
