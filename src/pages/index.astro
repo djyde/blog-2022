@@ -1,13 +1,21 @@
 ---
 import Home from "../layouts/Home.astro";
 import PostList from "../components/PostList.astro";
-import { Content as Intro } from "../intro.md";
+import { Content as AboutMe } from "../content/about-me.md";
+import dayjs from "dayjs";
+
+const posts = await Astro.glob("../pages/blog/*.md");
+// sort post by date
+posts.sort((a, b) => {
+  //@ts-ignore
+  return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+});
 
 const data = {
   activities: [
     {
       title: "代码之外 Beyond Code",
-      url: "https://bento.me/beyondcode"
+      url: "https://bento.me/beyondcode",
     },
     {
       title: "二分电台: #8 编程启蒙/从社区学习/个人竞争力",
@@ -29,48 +37,30 @@ const data = {
 ---
 
 <Home>
-  <div class="mx-auto text-sm">
-    <h2 class="font-bold mb-6 text-md">ABOUT / 关于我</h2>
-    <div class="prose prose-sm">
-      <Intro />
+  <section class="">
+    <h2 class="text-xl mb-6 text-base-content/60">About / 关于</h2>
+    <div class="prose">
+      <AboutMe />
     </div>
-  </div>
-  <div class="text-sm mt-8">
-    <h2 class="font-bold mb-6 text-md">PUBLIC / 公共表达</h2>
-    <div class="ml-6 md:ml-0">
-      <ul class="list-disc list-inside leading-loose">
-        {
-          data.activities.map((activity) => (
-            <li>
-              <a target="_blank" class="underline" href={activity.url}>
-                {activity.title}
+  </section>
+  <div class="divider my-12"></div>
+  <section>
+    <h2 class="text-xl mb-6 text-base-content/60">Writings / 写作</h2>
+    <div class="flex flex-col gap-3">
+      {
+        posts.map((post) => {
+          return (
+            <div class="flex flex-col md:flex-row md:items-center md:gap-3 ">
+              <span class="text-base-content/60">
+                {dayjs(post.frontmatter.date).format("YYYY-MM-DD")}
+              </span>
+              <a class="link text-lg" href={post.url}>
+                {post.frontmatter.title}
               </a>
-            </li>
-          ))
-        }
-      </ul>
+            </div>
+          );
+        })
+      }
     </div>
-  </div>
-  <div class="text-sm mt-8">
-    <h2 class="font-bold mb-6 text-md">PUBLICATION / 写作</h2>
-    <div class="ml-6 md:ml-0">
-      <ul class="list-disc list-inside leading-loose">
-        {
-          data.publications.map((publication) => (
-            <li>
-              <a target="_blank" class="underline" href={publication.url}>
-                {publication.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </div>
-  <div class="text-sm mt-8">
-    <h2 class="font-bold mb-6 text-md">ESSAYS / 文章</h2>
-    <div class="ml-6 md:ml-0">
-      <PostList />
-    </div>
-  </div>
+  </section>
 </Home>

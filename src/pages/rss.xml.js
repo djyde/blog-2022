@@ -2,7 +2,7 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 import config from '../config'
 import sanitizeHtml from 'sanitize-html';
 
-export async function get(context) {
+export async function GET(context) {
   const posts = import.meta.glob('./blog/*.{md,mdx}', {
     eager: true
   })

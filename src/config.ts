@@ -11,13 +11,13 @@ export default {
   ],
   navs: [
     {
-      title: '首页',
+      title: '文章',
       url: '/'
     },
-    {
-      title: '读者来信',
-      url: '/letters'
-    },
+    // {
+    //   title: '读者来信',
+    //   url: '/letters'
+    // },
     {
       title: '一对一咨询',
       url: '/consulting'
