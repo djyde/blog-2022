@@ -73,18 +73,26 @@ const contacts = [
 <Home>
   <section class="">
     <h2 class="text-xl mb-6 text-base-content/60">About / 关于</h2>
-    <div class="flex gap-3 items-center">
+
+    <img
+      width={128}
+      alt="avatar"
+      height={128}
+      class="rounded-full bg-cover aspect-square object-cover my-8"
+      src={Avatar.src}
+    />
+
+    <div class="flex gap-3 items-center mb-6">
       {
         contacts.map((contact) => {
           return (
             <div>
               <a target="_blank" class="" href={contact.url}>
-                <Image
+                <img
                   width={6}
                   height={6}
                   class="w-6 h-6"
-                  src={contact.icon}
-                  alt={contact.title}
+                  src={contact.icon.src}
                 />
               </a>
             </div>
@@ -92,14 +100,6 @@ const contacts = [
         })
       }
     </div>
-    <Image
-      width={128}
-      alt="avatar"
-      height={128}
-      class="rounded-full bg-cover aspect-square object-cover my-8"
-      src={Avatar}
-    />
-
     <div class="prose">
       <AboutMe />
     </div>
