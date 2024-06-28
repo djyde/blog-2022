@@ -23,11 +23,15 @@ const data = {
     },
     {
       title: "ByteTalk: 跟 Randy 聊聊博客、编程、创作那些事",
-      url: "https://bytetalk.fm/posts/episode-4/",
+      url: "https://bytetalk.limboy.me/posts/episode-4/",
     },
   ],
 
   publications: [
+    {
+      title: "Remix 入门实战",
+      url: "https://remix.lutaonan.com/",
+    },
     {
       title: "Next.js 应用开发实践",
       url: "https://nextjs-in-action-cn.taonan.lu/",
@@ -45,7 +49,38 @@ const data = {
   </section>
   <div class="divider my-12"></div>
   <section>
+    <h2 class="text-xl mb-6 text-base-content/60">In public / 公共表达</h2>
+    <div class="space-y-1">
+      {
+        data.activities.map((activity) => (
+          <div>
+            <a target="_blank" class="link" href={activity.url}>
+              {activity.title}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <div class="divider my-12"></div>
+
+  <section>
     <h2 class="text-xl mb-6 text-base-content/60">Writings / 写作</h2>
+    <div class="space-y-1">
+      {
+        data.publications.map((pub) => (
+          <div>
+            <a target="_blank" class="link" href={pub.url}>
+              {pub.title}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <div class="divider my-12"></div>
+  <section>
+    <h2 class="text-xl mb-6 text-base-content/60">Essays / 文章</h2>
     <div class="flex flex-col gap-3">
       {
         posts.map((post) => {

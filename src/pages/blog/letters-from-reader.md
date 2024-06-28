@@ -12,13 +12,13 @@ cover: https://gbstatic.djyde.com/blog/Snapseed%208.jpg?x-oss-process=style/cove
 
 几天前我购买了一块软木板挂在自己的房间，想到可以把一些有意思的读者来信打印出来钉到软木板上。于是在收件箱整理了 2014 年至今 5 年来收到的所有读者来信。
 
-![](https://gbstatic.djyde.com/blog/Snapseed%208.jpg?x-oss-process=style/80)
+![来信](https://gbstatic.djyde.com/blog/Snapseed%208.jpg?x-oss-process=style/80)
 
-![](https://gbstatic.djyde.com/blog/Desktop.png?x-oss-process=style/80)
+![来信](https://gbstatic.djyde.com/blog/Desktop.png?x-oss-process=style/80)
 
 其中我发现一封 2015 年的已经被我淡忘的邮件：
 
-![](https://gbstatic.djyde.com/blog/Desktop%20HD.png?x-oss-process=style/80)
+![来自当老师的妈妈的来信](https://gbstatic.djyde.com/blog/Desktop%20HD.png?x-oss-process=style/80)
 
 这是一位在国外当老师的妈妈，特意来信想为她的儿子寻问关于编程的问题。当时我回信尽可能地写了很多浅薄的意见和经验分享，后来就再没有通信。这位母亲让我感动。
 
