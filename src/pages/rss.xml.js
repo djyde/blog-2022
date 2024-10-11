@@ -10,10 +10,10 @@ export async function GET(context) {
     title: config.title,
     description: `Randy is blogging about life, tech and music.`,
     site: context.site,
-    follow_challenge: {
-      feed_id: "41147805272531968",
-      user_id: "41343255271334912"
-    },
+    customData:  `<follow_challenge>
+    <feedId>41147805272531968</feedId>
+    <userId>41343255271334912</userId>
+</follow_challenge>`,
     items: Object.values(posts).map(post => ({
       title: post.frontmatter.title,
       link: post.url,
