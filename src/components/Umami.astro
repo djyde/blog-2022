@@ -8,3 +8,9 @@ const { umami } = config;
     <script async defer data-website-id={umami} src="https://a.taonan.lu/ana.js" />
   )
 }
+
+{
+  import.meta.env.PROD && (
+    <script defer data-domain="lutaonan.com" src="http://psb.djyde.com/js/script.js"></script>
+  )
+}
