@@ -8,7 +8,7 @@ import Home from "./Home.astro"
 const { frontmatter, headings } = Astro.props
 ---
 
-<Home title={`${frontmatter.title} | ${config.title}`} ogType="article" ogDescription={frontmatter.ogDescription} ogImage={frontmatter.ogImage}>
+<Home title={`${frontmatter.title}`} ogType="article" ogDescription={frontmatter.ogDescription} ogImage={frontmatter.ogImage}>
   <TOC headings={headings} />
   <div class="prose mx-auto px-4 lg:px-0 my-12 lg:my-12">
     <h1>{frontmatter.title}</h1>
