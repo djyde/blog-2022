@@ -1,5 +1,7 @@
 {
+  "editor.pasteAs.enabled": true,
+  "markdown.editor.filePaste.enabled": "smart",
   "markdown.copyFiles.destination": {
-    "/src/pages/**/*.md": "/public/imgs/${fileName}"
+    "/src/pages/blog/**/*.md": "/src/images/post/${fileName}"
   }
 }
